@@ -1,0 +1,1180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45EA073C-E1C6-4DC8-98F4-7D8137D29BB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfDemoBrowser</RootNamespace>
+    <AssemblyName>WpfDemoBrowser</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="PartialViews\CSharp\CSharp.xaml.cs">
+      <DependentUpon>CSharp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\ElementBinding.xaml.cs">
+      <DependentUpon>ElementBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Drawing\C12\C12.xaml.cs">
+      <DependentUpon>C12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Drawing\C13\C13.xaml.cs">
+      <DependentUpon>C13.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Drawing\C14\C14.xaml.cs">
+      <DependentUpon>C14.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\MenusAndToolbars\MenusAndToolbarsTest.xaml.cs">
+      <DependentUpon>MenusAndToolbarsTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="PartialViews\Animation\C15\AnimationInStyle.xaml.cs">
+      <DependentUpon>AnimationInStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C15\AnimationPlayer.xaml.cs">
+      <DependentUpon>AnimationPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C15\ArithmeticConverter.cs" />
+    <Compile Include="PartialViews\Animation\C15\CachingTest.xaml.cs">
+      <DependentUpon>CachingTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C15\CachingTest2.xaml.cs">
+      <DependentUpon>CachingTest2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C15\CodeAnimation.xaml.cs">
+      <DependentUpon>CodeAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C15\CustomEasingFunction.xaml.cs">
+      <DependentUpon>CustomEasingFunction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C15\Easing.xaml.cs">
+      <DependentUpon>Easing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C15\FrameRates.xaml.cs">
+      <DependentUpon>FrameRates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C15\ImageWipe.xaml.cs">
+      <DependentUpon>ImageWipe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C15\XamlAnimation.xaml.cs">
+      <DependentUpon>XamlAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\AnimateRadialGradient.xaml.cs">
+      <DependentUpon>AnimateRadialGradient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\AnimateVisual.xaml.cs">
+      <DependentUpon>AnimateVisual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\BlurringButtons.xaml.cs">
+      <DependentUpon>BlurringButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\ExpandElement.xaml.cs">
+      <DependentUpon>ExpandElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\ExpandElement2.xaml.cs">
+      <DependentUpon>ExpandElement2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\FrameBasedAnimation.xaml.cs">
+      <DependentUpon>FrameBasedAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\KeySplineAnimation.xaml.cs">
+      <DependentUpon>KeySplineAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\PathBasedAnimation.xaml.cs">
+      <DependentUpon>PathBasedAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\RotateButton.xaml.cs">
+      <DependentUpon>RotateButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Animation\C16\RotateButtonWithLayout.xaml.cs">
+      <DependentUpon>RotateButtonWithLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\ControlTemplates\ButtonTemplate.xaml.cs">
+      <DependentUpon>ButtonTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\ControlTemplates\GradientButtonTest.xaml.cs">
+      <DependentUpon>GradientButtonTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\ControlTemplates\MultiPartTemplates.xaml.cs">
+      <DependentUpon>MultiPartTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\ControlTemplates\Resources\GradientButton.xaml.cs">
+      <DependentUpon>GradientButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\ControlTemplates\Resources\GradientButtonVariant.xaml.cs">
+      <DependentUpon>GradientButtonVariant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\ControlTemplates\SimpleCustomButton.xaml.cs">
+      <DependentUpon>SimpleCustomButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\CustomControls\ColorPickerTwoWays.xaml.cs">
+      <DependentUpon>ColorPickerTwoWays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\CustomControls\ColorPickerUserControlTest.xaml.cs">
+      <DependentUpon>ColorPickerUserControlTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\CustomControls\CustomDrawnElementChrome.xaml.cs">
+      <DependentUpon>CustomDrawnElementChrome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\CustomControls\CustomDrawnElementTest.xaml.cs">
+      <DependentUpon>CustomDrawnElementTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\CustomControls\FlipPanelAlternateTemplate.xaml.cs">
+      <DependentUpon>FlipPanelAlternateTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\CustomControls\FlipPanelTest.xaml.cs">
+      <DependentUpon>FlipPanelTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\CustomControls\MaskedTextBoxTest.xaml.cs">
+      <DependentUpon>MaskedTextBoxTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\CustomControls\WrapBreakPanelTest.xaml.cs">
+      <DependentUpon>WrapBreakPanelTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\BindingGroupValidation.xaml.cs">
+      <DependentUpon>BindingGroupValidation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\BindProductObject.xaml.cs">
+      <DependentUpon>BindProductObject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\BindToCollection.xaml.cs">
+      <DependentUpon>BindToCollection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\BindToDataSet.xaml.cs">
+      <DependentUpon>BindToDataSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\BindToLinqFilteredCollection.xaml.cs">
+      <DependentUpon>BindToLinqFilteredCollection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\BindToObjectDataProvider.xaml.cs">
+      <DependentUpon>BindToObjectDataProvider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\BindToXmlDataProvider.xaml.cs">
+      <DependentUpon>BindToXmlDataProvider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\EditProductObject.xaml.cs">
+      <DependentUpon>EditProductObject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\NoBlankProductRule.cs" />
+    <Compile Include="PartialViews\DataBinding\PositivePriceRule.cs" />
+    <Compile Include="PartialViews\DataBinding\C19\ValidationTest.xaml.cs">
+      <DependentUpon>ValidationTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C19\VirtualizationTest.xaml.cs">
+      <DependentUpon>VirtualizationTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\CheckBoxList.xaml.cs">
+      <DependentUpon>CheckBoxList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\ComboBoxSelectionBox.xaml.cs">
+      <DependentUpon>ComboBoxSelectionBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\DataTemplateByType.xaml.cs">
+      <DependentUpon>DataTemplateByType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\DataTemplateControls.xaml.cs">
+      <DependentUpon>DataTemplateControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\DataTemplateImages.xaml.cs">
+      <DependentUpon>DataTemplateImages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\DataTemplateList.xaml.cs">
+      <DependentUpon>DataTemplateList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\ExpandingDataTemplate.xaml.cs">
+      <DependentUpon>ExpandingDataTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\ImagePathConverter.cs" />
+    <Compile Include="PartialViews\DataBinding\C20\ListStyles.xaml.cs">
+      <DependentUpon>ListStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\MoreValueConverters.xaml.cs">
+      <DependentUpon>MoreValueConverters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\PriceConverter.cs" />
+    <Compile Include="PartialViews\DataBinding\PriceToBackgroundConverter.cs" />
+    <Compile Include="PartialViews\DataBinding\C20\RadioButtonList.xaml.cs">
+      <DependentUpon>RadioButtonList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\StyleSelector.cs" />
+    <Compile Include="PartialViews\DataBinding\C20\TemplateSelector.cs" />
+    <Compile Include="PartialViews\DataBinding\C20\ValueConverter.xaml.cs">
+      <DependentUpon>ValueConverter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\ValueInStockConverter.cs" />
+    <Compile Include="PartialViews\DataBinding\C20\VariedStyles.xaml.cs">
+      <DependentUpon>VariedStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\VariedTemplates.xaml.cs">
+      <DependentUpon>VariedTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C20\WrappedList.xaml.cs">
+      <DependentUpon>WrappedList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C21\FilterCollection.xaml.cs">
+      <DependentUpon>FilterCollection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C21\FilterDataSet.xaml.cs">
+      <DependentUpon>FilterDataSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C21\GroupInRanges.xaml.cs">
+      <DependentUpon>GroupInRanges.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C21\GroupList.xaml.cs">
+      <DependentUpon>GroupList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C21\NavigateCollection.xaml.cs">
+      <DependentUpon>NavigateCollection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C21\PriceRangeProductGrouper.cs" />
+    <Compile Include="PartialViews\DataBinding\C22\AdvancedListView.xaml.cs">
+      <DependentUpon>AdvancedListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\BasicListView.xaml.cs">
+      <DependentUpon>BasicListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\BoundTreeView.xaml.cs">
+      <DependentUpon>BoundTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\BoundTreeViewDataSet.xaml.cs">
+      <DependentUpon>BoundTreeViewDataSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\CustomListViewTest.xaml.cs">
+      <DependentUpon>CustomListViewTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\DataGridEditing.xaml.cs">
+      <DependentUpon>DataGridEditing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\DataGridGrouping.xaml.cs">
+      <DependentUpon>DataGridGrouping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\DataGridRowDetails.xaml.cs">
+      <DependentUpon>DataGridRowDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\DataGridTest.xaml.cs">
+      <DependentUpon>DataGridTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\DirectoryTreeView.xaml.cs">
+      <DependentUpon>DirectoryTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DataBinding\C22\TileView.cs" />
+    <Compile Include="PartialViews\DrawingIn3D\AnimatedRing.xaml.cs">
+      <DependentUpon>AnimatedRing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DrawingIn3D\CubeMesh.xaml.cs">
+      <DependentUpon>CubeMesh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DrawingIn3D\ElementsIn3D.xaml.cs">
+      <DependentUpon>ElementsIn3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DrawingIn3D\HitTesting.xaml.cs">
+      <DependentUpon>HitTesting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DrawingIn3D\Materials.xaml.cs">
+      <DependentUpon>Materials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DrawingIn3D\OneTriangleMesh.xaml.cs">
+      <DependentUpon>OneTriangleMesh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DrawingIn3D\PersonIn3D.xaml.cs">
+      <DependentUpon>PersonIn3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DrawingIn3D\TextureMapping.xaml.cs">
+      <DependentUpon>TextureMapping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DrawingIn3D\TrackballRing.xaml.cs">
+      <DependentUpon>TrackballRing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\DrawingIn3D\VideoIn3D.xaml.cs">
+      <DependentUpon>VideoIn3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Drawing\C14\DrawingCanvas.cs" />
+    <Compile Include="PartialViews\Drawing\C14\GrayscaleEffect.cs" />
+    <Compile Include="PartialViews\LayoutPanels.xaml.cs">
+      <DependentUpon>LayoutPanels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Resources.xaml.cs">
+      <DependentUpon>Resources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\RoutedEvents\BubbledLabelClick.xaml.cs">
+      <DependentUpon>BubbledLabelClick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\RoutedEvents\ButtonMouseUpEvent.xaml.cs">
+      <DependentUpon>ButtonMouseUpEvent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\RoutedEvents\DragAndDrop.xaml.cs">
+      <DependentUpon>DragAndDrop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\RoutedEvents\Focus.xaml.cs">
+      <DependentUpon>Focus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\RoutedEvents\KeyModifiers.xaml.cs">
+      <DependentUpon>KeyModifiers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\RoutedEvents\KeyPressEvents.xaml.cs">
+      <DependentUpon>KeyPressEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\RoutedEvents\MousePosition.xaml.cs">
+      <DependentUpon>MousePosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\RoutedEvents\OnlyNumbers.xaml.cs">
+      <DependentUpon>OnlyNumbers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\RoutedEvents\TunneledKeyPress.xaml.cs">
+      <DependentUpon>TunneledKeyPress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\SoundAndVideo\AnimatedVideoWindow.xaml.cs">
+      <DependentUpon>AnimatedVideoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\SoundAndVideo\CodePlayback.xaml.cs">
+      <DependentUpon>CodePlayback.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\SoundAndVideo\DeclarativePlayback.xaml.cs">
+      <DependentUpon>DeclarativePlayback.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\SoundAndVideo\MultipleSounds.xaml.cs">
+      <DependentUpon>MultipleSounds.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\SoundAndVideo\SoundPlayerTest.xaml.cs">
+      <DependentUpon>SoundPlayerTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\SoundAndVideo\SpeechRecognition.xaml.cs">
+      <DependentUpon>SpeechRecognition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\SoundAndVideo\SpeechSynthesis.xaml.cs">
+      <DependentUpon>SpeechSynthesis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\SoundAndVideo\SynchronizedAnimation.xaml.cs">
+      <DependentUpon>SynchronizedAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\SoundAndVideo\TimeSpanConverter.cs" />
+    <Compile Include="PartialViews\SoundAndVideo\Video.xaml.cs">
+      <DependentUpon>Video.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Styles\AutomaticStyles.xaml.cs">
+      <DependentUpon>AutomaticStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Styles\EventSetter.xaml.cs">
+      <DependentUpon>EventSetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Styles\EventTriggers.xaml.cs">
+      <DependentUpon>EventTriggers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Styles\ReuseFontWithResources.xaml.cs">
+      <DependentUpon>ReuseFontWithResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Styles\ReuseFontWithStyles.xaml.cs">
+      <DependentUpon>ReuseFontWithStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Styles\SimpleTriggers.xaml.cs">
+      <DependentUpon>SimpleTriggers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Styles\StyleInheritance.xaml.cs">
+      <DependentUpon>StyleInheritance.xaml</DependentUpon>
+    </Compile>
+    <Page Include="PartialViews\Animation\C15\AnimationInStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C15\AnimationPlayer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C15\CachingTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C15\CachingTest2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C15\CodeAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C15\CustomEasingFunction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C15\Easing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C15\FrameRates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C15\ImageWipe.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C15\XamlAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\AnimateRadialGradient.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\AnimateVisual.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\BlurringButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\ExpandElement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\ExpandElement2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\FrameBasedAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\KeySplineAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\PathBasedAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\RotateButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Animation\C16\RotateButtonWithLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Behaviors\DragInCanvasTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Behaviors\FadeInAndOutTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Behaviors\PlayMediaTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Commands\CustomCommand.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Commands\CustomControlWithCommand.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Commands\MonitorCommands.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Commands\NoCommandTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Commands\SimpleDocument.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Commands\TestNewCommand.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Commands\TwoDocument.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Controls\ContentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Controls\DateControls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Controls\FontTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Controls\ListControlTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Controls\ScrollableTextBoxColumn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Controls\RangeBaseTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Controls\TextBoxTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Controls\TooltipsAndPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\ControlTemplates\ButtonTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\ControlTemplates\GradientButtonTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\ControlTemplates\MultiPartTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\ControlTemplates\Resources\GradientButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\ControlTemplates\Resources\GradientButtonVariant.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\ControlTemplates\Resources\GradientButtonWithStyleSetters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\ControlTemplates\Resources\ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\ControlTemplates\SimpleCustomButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CustomControls\ColorPickerTwoWays.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CustomControls\ColorPickerUserControlTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CustomControls\CustomDrawnElementChrome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CustomControls\CustomDrawnElementTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CustomControls\FlipPanelAlternateTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CustomControls\FlipPanelTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CustomControls\MaskedTextBoxTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CustomControls\WrapBreakPanelTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\BindingGroupValidation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\BindProductObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\BindToCollection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\BindToDataSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\BindToLinqFilteredCollection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\BindToObjectDataProvider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\BindToXmlDataProvider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\EditProductObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\ValidationTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C19\VirtualizationTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\CheckBoxList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\ComboBoxSelectionBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\DataTemplateByType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\DataTemplateControls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\DataTemplateImages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\DataTemplateList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\ExpandingDataTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\ListStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\MoreValueConverters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\RadioButtonList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\ValueConverter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\VariedStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\VariedTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C20\WrappedList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C21\FilterCollection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C21\FilterDataSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C21\GroupInRanges.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C21\GroupList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C21\NavigateCollection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\AdvancedListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\BasicListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\BoundTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\BoundTreeViewDataSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\CustomListViewTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\DataGridEditing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\DataGridGrouping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\DataGridRowDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\DataGridTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DataBinding\C22\DirectoryTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CSharp\CSharp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\ElementBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\AnimatedRing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\CubeMesh.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\ElementsIn3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\HitTesting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\Materials.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\OneTriangleMesh.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\PersonIn3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\PersonResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\TextureMapping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\TrackballRing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\DrawingIn3D\VideoIn3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Drawing\C12\C12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialViews\Drawing\C13\C13.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialViews\Drawing\C14\C14.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialViews\LayoutPanels.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\MenusAndToolbars\MenusAndToolbarsTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PartialViews\Behaviors\DragInCanvasTest.xaml.cs">
+      <DependentUpon>DragInCanvasTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Behaviors\FadeInAndOutTest.xaml.cs">
+      <DependentUpon>FadeInAndOutTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Behaviors\PlayMediaTest.xaml.cs">
+      <DependentUpon>PlayMediaTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Commands\CommandSlider.cs" />
+    <Compile Include="PartialViews\Commands\CustomCommand.xaml.cs">
+      <DependentUpon>CustomCommand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Commands\CustomControlWithCommand.xaml.cs">
+      <DependentUpon>CustomControlWithCommand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Commands\MonitorCommands.xaml.cs">
+      <DependentUpon>MonitorCommands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Commands\NoCommandTextBox.xaml.cs">
+      <DependentUpon>NoCommandTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Commands\SimpleDocument.xaml.cs">
+      <DependentUpon>SimpleDocument.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Commands\TestNewCommand.xaml.cs">
+      <DependentUpon>TestNewCommand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Commands\TwoDocument.xaml.cs">
+      <DependentUpon>TwoDocument.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Controls\ContentControl.xaml.cs">
+      <DependentUpon>ContentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Controls\DateControls.xaml.cs">
+      <DependentUpon>DateControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Controls\FontTest.xaml.cs">
+      <DependentUpon>FontTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Controls\ListControlTest.xaml.cs">
+      <DependentUpon>ListControlTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Controls\ScrollableTextBoxColumn.xaml.cs">
+      <DependentUpon>ScrollableTextBoxColumn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Controls\RangeBaseTest.xaml.cs">
+      <DependentUpon>RangeBaseTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Controls\TextBoxTest.xaml.cs">
+      <DependentUpon>TextBoxTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialViews\Controls\TooltipsAndPopup.xaml.cs">
+      <DependentUpon>TooltipsAndPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialViews\MenusAndToolbars\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEvents\BubbledLabelClick.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEvents\ButtonMouseUpEvent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEvents\DragAndDrop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEvents\Focus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEvents\KeyModifiers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEvents\KeyPressEvents.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEvents\MousePosition.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEvents\OnlyNumbers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEvents\TunneledKeyPress.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\SoundAndVideo\AnimatedVideoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\SoundAndVideo\CodePlayback.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\SoundAndVideo\DeclarativePlayback.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\SoundAndVideo\MultipleSounds.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\SoundAndVideo\SoundPlayerTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\SoundAndVideo\SpeechRecognition.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\SoundAndVideo\SpeechSynthesis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\SoundAndVideo\SynchronizedAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\SoundAndVideo\Video.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Styles\AutomaticStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Styles\BasicDialogBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Styles\EventSetter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Styles\EventTriggers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Styles\ReuseFontWithResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Styles\ReuseFontWithStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Styles\SimpleTriggers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\Styles\StyleInheritance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\MyTreeViewItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PartialViews\Controls\CustomWords.lex" />
+    <Resource Include="PartialViews\Drawing\C14\Grayscale_Compiled.ps" />
+    <Resource Include="PartialViews\Controls\bayern.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3DTools\3DTools.csproj">
+      <Project>{82298f41-7e05-412c-95a9-6a562f6ab6b2}</Project>
+      <Name>3DTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomBehaviorsLibrary\CustomBehaviorsLibrary.csproj">
+      <Project>{a470fea7-7c76-485f-8357-e9b27bdd1efc}</Project>
+      <Name>CustomBehaviorsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{89d58647-9808-47c2-b08f-f4b59664f162}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ResourceLibrary\ResourceLibrary.csproj">
+      <Project>{be02c318-e794-460c-8e43-7018ba986e46}</Project>
+      <Name>ResourceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StoreDatabase\StoreDatabase.csproj">
+      <Project>{5fc8b8c3-c36d-44aa-842e-5e158d887e61}</Project>
+      <Name>StoreDatabase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bg.png" />
+    <Resource Include="Images\happyface.jpg" />
+    <None Include="DocumentCode\C1.md" />
+    <Content Include="PartialViews\DrawingIn3D\test.mpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="PartialViews\Drawing\C12\tile.jpg" />
+    <Resource Include="PartialViews\Drawing\C12\logo.gif" />
+    <Resource Include="PartialViews\RoutedEvents\happyface.jpg" />
+    <Resource Include="PartialViews\DrawingIn3D\Tree.jpg" />
+    <Resource Include="PartialViews\SoundAndVideo\Resources\chimes.wav" />
+    <None Include="PartialViews\SoundAndVideo\SQ3GM1.MID">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PartialViews\SoundAndVideo\test.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PartialViews\SoundAndVideo\test.mpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PartialViews\SoundAndVideo\test.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PartialViews\DataBinding\360.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PartialViews\DataBinding\362.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PartialViews\DataBinding\397.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PartialViews\DataBinding\401.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PartialViews\DataBinding\404.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PartialViews\DataBinding\image.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="PartialViews\DataBinding\C19\store.xml" />
+    <Resource Include="PartialViews\Animation\C15\day.jpg" />
+    <Resource Include="PartialViews\Animation\C15\night.jpg" />
+    <Resource Include="PartialViews\Animation\C16\day.jpg" />
+    <Resource Include="PartialViews\Animation\C16\night.jpg" />
+    <Content Include="PartialViews\Behaviors\test.mp3" />
+    <None Include="PartialViews\Drawing\C14\Grayscale_Uncompiled.fx" />
+    <Resource Include="PartialViews\Drawing\C14\harpsichord.jpg" />
+    <Resource Include="PartialViews\Drawing\C14\pointer.png" />
+    <Resource Include="PartialViews\Drawing\C13\Creek.jpg" />
+    <Resource Include="PartialViews\Drawing\C12\celestial.jpg" />
+    <Resource Include="PartialViews\Drawing\C12\grandpiano.jpg" />
+    <Resource Include="PartialViews\Drawing\C12\happyface.jpg" />
+    <Resource Include="PartialViews\Styles\happyface.jpg" />
+    <Resource Include="Images\office.jpg" />
+    <Resource Include="PartialViews\Controls\redx.jpg" />
+    <Resource Include="PartialViews\Controls\happyface.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PartialViews\Windows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Unity">
+      <Version>7.2.0.1422</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

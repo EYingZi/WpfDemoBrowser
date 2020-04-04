@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="CS.CSharp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer>
+        <StackPanel>
+            <!--Shapes-->
+            <Grid Margin="10" Width="600">
+                <Border Effect="{StaticResource DropShadow}" Background="White" />
+                <FlowDocumentScrollViewer Name="docViewer" VerticalScrollBarVisibility="Auto">
+                    <FlowDocument IsOptimalParagraphEnabled="False">
+                        <!--<Paragraph Style="{StaticResource Heading}">
+                            第1章
+                        </Paragraph>
+                        <Paragraph Style="{StaticResource Subheading}">
+                            1.1 Hello, World!
+                        </Paragraph>
+                        <Paragraph>
+                            你好，世界！
+                        </Paragraph>
+                        <Paragraph>
+                            <Run>1222222</Run>
+                            <Run>12333</Run>
+                        </Paragraph>
+                        <BlockUIContainer>
+                            <avalonEdit:TextEditor Name="textEditor" Style="{StaticResource CSCode}">
+                                using System.Console;
+                            </avalonEdit:TextEditor>
+                        </BlockUIContainer>
+                        <List MarkerStyle="Disc">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <List MarkerStyle="Box">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <List MarkerStyle="Circle">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <List MarkerStyle="Square">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <List MarkerStyle="Decimal">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <List MarkerStyle="LowerLatin">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <List MarkerStyle="UpperLatin">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <List MarkerStyle="LowerRoman">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <List MarkerStyle="UpperRoman">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <List MarkerStyle="None">
+                            <ListItem>
+                                <Paragraph>红色</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>蓝色</Paragraph>
+                            </ListItem>
+                        </List>
+                        <Table>
+                            <TableRowGroup>
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>123</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>123</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>123</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>123</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                            </TableRowGroup>
+                        </Table>-->
+                    </FlowDocument>
+                </FlowDocumentScrollViewer>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

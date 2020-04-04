@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Controls.TextBoxTest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=system"
+    Width="400" Height="600"
+    >
+    <StackPanel>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox  Name="txt" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True"  
+             SelectionChanged="txt_SelectionChanged"  
+             SpellCheck.IsEnabled="True">The Ministry of Truth contained, it was said, three thousand rooms above ground level, and corresponding ramifications below. Scattered about London there were just three other buildings of similar appearance and size. So completely did they dwarf the surrounding architecture that from the roof of Victory Mansions you could see all four of them simultaneously. They were the homes of the four Ministries between which the entire apparatus of government was divided. The Ministry of Truth, which concerned itself with news, entertainment, education, and the fine arts. The Ministry of Peace, which concerned itself with war. The Ministry of Love, which maintained law and order. And the Ministry of Plenty, which was responsible for economic affairs. Their names, in Newspeak: Minitrue, Minipax, Miniluv, and Miniplenty.</TextBox>
+            <ScrollViewer Foreground="Blue" Grid.Row="1" Margin="0,10,0,5" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock>Current selection:</TextBlock>
+                    <TextBlock  Name="txtSelection" TextWrapping="Wrap"></TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <!--CustomSpellChecker-->
+        <Grid Margin="5">
+            <TextBox SpellCheck.IsEnabled="True" TextWrapping="Wrap" 
+            Text="Now the spell checker recognizes acantholysis and offers the right correction for acantholysi">
+                <SpellCheck.CustomDictionaries>
+                    <sys:Uri>pack://application:,,,/Controls;component/CustomWords.lex</sys:Uri>
+                </SpellCheck.CustomDictionaries>
+            </TextBox>
+        </Grid>
+    </StackPanel>
+    
+</UserControl>

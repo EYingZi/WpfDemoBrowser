@@ -1,0 +1,58 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit">
+    <!--<Border Effect="{StaticResource DropShadow}" Background="White" />-->
+    <DropShadowEffect
+        x:Key="DropShadow" Color="LightGray" ShadowDepth="2" BlurRadius="20" Opacity="0.5" />
+    
+    <Style x:Key="MBorder" TargetType="Border">
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Width" Value="400" />
+        <Setter Property="Height" Value="300" />
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <Style x:Key="CSCode" TargetType="avalonEdit:TextEditor">
+        <Setter Property="SyntaxHighlighting" Value="C#" />
+        <Setter Property="FontFamily" Value="Consolas" />
+        <Setter Property="FontSize" Value="10pt" />
+        <Setter Property="ShowLineNumbers" Value="True" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+    </Style>
+
+    <Style x:Key="TxtCode" TargetType="avalonEdit:TextEditor">
+        <Setter Property="FontFamily" Value="Consolas" />
+        <Setter Property="FontSize" Value="10pt" />
+        <Setter Property="ShowLineNumbers" Value="True" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+    </Style>
+
+    <Style x:Key="XmlCode" TargetType="avalonEdit:TextEditor">
+        <Setter Property="SyntaxHighlighting" Value="Xml" />
+        <Setter Property="FontFamily" Value="Consolas" />
+        <Setter Property="FontSize" Value="10pt" />
+        <Setter Property="ShowLineNumbers" Value="True" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+    </Style>
+
+    <Style x:Key="Heading">
+        <Setter Property="Paragraph.FontSize" Value="30"></Setter>
+        <Setter Property="Paragraph.TextDecorations" Value="Underline"></Setter>
+        <Setter Property="Paragraph.TextAlignment" Value="Center"></Setter>
+    </Style>
+    <Style x:Key="Subheading" >
+        <Setter Property="Paragraph.FontWeight" Value="Bold"></Setter>
+        <Setter Property="Paragraph.TextAlignment" Value="Center"></Setter>
+    </Style>
+</ResourceDictionary>

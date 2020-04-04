@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Controls.ListControlTest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Width="300" Height="500">
+    <StackPanel>
+        <ListBox Margin="5" SelectionMode="Multiple" Name="list"  SelectionChanged="list_SelectionChanged">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="happyface.jpg"  Width="30" Height="30"></Image>
+                <Label VerticalContentAlignment="Center">A happy face</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="redx.jpg" Width="30" Height="30"></Image>
+                <Label VerticalContentAlignment="Center">A warning sign</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="happyface.jpg"  Width="30" Height="30"></Image>
+                <Label VerticalContentAlignment="Center">A happy face</Label>
+            </StackPanel>
+        </ListBox>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ListBox Name="checkBoxList" SelectionChanged="checkBoxList_SelectionChanged"
+             CheckBox.Click="checkBoxList_SelectionChanged" >
+                <CheckBox Margin="3">Option 1</CheckBox>
+                <CheckBox Margin="3">Option 2</CheckBox>
+                <CheckBox Margin="3">Option 3</CheckBox>
+            </ListBox>
+            <StackPanel Grid.Row="1" Margin="0,10,0,0">
+                <TextBlock>Current selection:</TextBlock>
+                <TextBlock  Name="txtSelection" TextWrapping="Wrap"></TextBlock>
+                <Button Margin="0,10,0,0" Click="cmd_CheckAllItems">Examine All Items</Button>
+            </StackPanel>
+        </Grid>
+        <ComboBox Margin="5" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="happyface.jpg"  Width="30" Height="30"></Image>
+                <Label VerticalContentAlignment="Center">A happy face</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="redx.jpg" Width="30" Height="30"></Image>
+                <Label VerticalContentAlignment="Center">A warning sign</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="happyface.jpg"  Width="30" Height="30"></Image>
+                <Label VerticalContentAlignment="Center">A happy face</Label>
+            </StackPanel>
+        </ComboBox>
+    </StackPanel>
+    
+</UserControl>
