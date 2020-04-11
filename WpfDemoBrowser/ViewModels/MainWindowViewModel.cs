@@ -64,15 +64,15 @@ namespace WpfDemoBrowser.ViewModels
                         new MyTreeViewItem("5.5.3 鼠标拖放", nameof(DragAndDrop)),
                     }
                 },
-                new MyTreeViewItem("6. 控件")
+                new MyTreeViewItem("6. 控件", nameof(ControlsW))
                 {
                     MenuItems = new ObservableCollection<MyTreeViewItem>()
                     {
-                        new MyTreeViewItem("6.1.2 字体", nameof(FontTest)),
-                        new MyTreeViewItem("6.2 内容控件", nameof(ContentControlTest)),
-                        new MyTreeViewItem("6.2.6 工具提示", nameof(TooltipsAndPopup)),
-                        new MyTreeViewItem("6.3 特殊容器", nameof(ScrollableTextBoxColumn)),
-                        new MyTreeViewItem("6.4 文本控件", nameof(TextBoxTest)),
+                        //new MyTreeViewItem("6.1.2 字体", nameof(FontTest)),
+                        //new MyTreeViewItem("6.2 内容控件", nameof(ContentControlTest)),
+                        //new MyTreeViewItem("6.2.6 工具提示", nameof(TooltipsAndPopup)),
+                        //new MyTreeViewItem("6.3 特殊容器", nameof(ScrollableTextBoxColumn)),
+                        //new MyTreeViewItem("6.4 文本控件", nameof(TextBoxTest)),
                         new MyTreeViewItem("6.5 列表控件", nameof(ListControlTest)),
                         new MyTreeViewItem("6.6 基于范围的控件", nameof(RangeBase)),
                         new MyTreeViewItem("6.7 日期控件", nameof(DateControls)),

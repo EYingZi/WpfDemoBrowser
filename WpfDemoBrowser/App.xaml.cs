@@ -59,11 +59,8 @@ namespace WpfDemoBrowser
             containerRegistry.RegisterForNavigation<DragAndDrop>();
 
             // Controls
-            containerRegistry.RegisterForNavigation<FontTest>();
-            containerRegistry.RegisterForNavigation<ContentControlTest>();
-            containerRegistry.RegisterForNavigation<TooltipsAndPopup>();
-            containerRegistry.RegisterForNavigation<ScrollableTextBoxColumn>();
-            containerRegistry.RegisterForNavigation<TextBoxTest>();
+            containerRegistry.RegisterForNavigation<ControlsW>();
+
             containerRegistry.RegisterForNavigation<ListControlTest>();
             containerRegistry.RegisterForNavigation<RangeBase>();
             containerRegistry.RegisterForNavigation<DateControls>();

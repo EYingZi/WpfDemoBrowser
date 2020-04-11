@@ -73,6 +73,9 @@
     <Compile Include="PartialViews\Drawing\C14\C14.xaml.cs">
       <DependentUpon>C14.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PartialViews\ControlsW.xaml.cs">
+      <DependentUpon>ControlsW.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PartialViews\MenusAndToolbars\MenusAndToolbarsTest.xaml.cs">
       <DependentUpon>MenusAndToolbarsTest.xaml</DependentUpon>
     </Compile>
@@ -541,15 +544,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\Controls\ContentControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\Controls\DateControls.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\Controls\FontTest.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -557,19 +552,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\Controls\ScrollableTextBoxColumn.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\Controls\RangeBaseTest.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\Controls\TextBoxTest.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\Controls\TooltipsAndPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -857,6 +840,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PartialViews\ControlsW.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="PartialViews\LayoutPanels.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -908,29 +895,14 @@
     <Compile Include="PartialViews\Commands\TwoDocument.xaml.cs">
       <DependentUpon>TwoDocument.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PartialViews\Controls\ContentControl.xaml.cs">
-      <DependentUpon>ContentControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PartialViews\Controls\DateControls.xaml.cs">
       <DependentUpon>DateControls.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\Controls\FontTest.xaml.cs">
-      <DependentUpon>FontTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="PartialViews\Controls\ListControlTest.xaml.cs">
       <DependentUpon>ListControlTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PartialViews\Controls\ScrollableTextBoxColumn.xaml.cs">
-      <DependentUpon>ScrollableTextBoxColumn.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PartialViews\Controls\RangeBaseTest.xaml.cs">
       <DependentUpon>RangeBaseTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\Controls\TextBoxTest.xaml.cs">
-      <DependentUpon>TextBoxTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\Controls\TooltipsAndPopup.xaml.cs">
-      <DependentUpon>TooltipsAndPopup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
