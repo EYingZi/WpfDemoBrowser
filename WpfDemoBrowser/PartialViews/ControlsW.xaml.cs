@@ -63,5 +63,81 @@ namespace WpfDemoBrowser.PartialViews.Views
                 "Selection from {0} to {1} is \"{2}\"",
                 txt.SelectionStart, txt.SelectionLength, txt.SelectedText);
         }
+
+
+        private void list_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        // CheckBoxList
+        private void checkBoxList_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            // Select when checkbox portion is clicked (optional).
+            if (e.OriginalSource is CheckBox)
+            {
+                checkBoxList.SelectedItem = e.OriginalSource;
+            }
+
+            if (checkBoxList.SelectedItem == null) return;
+            txtSelection2.Text = String.Format(
+                "You chose item at position {0}.\r\nChecked state is {1}.",
+                checkBoxList.SelectedIndex,
+                ((CheckBox)checkBoxList.SelectedItem).IsChecked);
+        }
+
+        private void cmd_CheckAllItems(object sender, RoutedEventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (CheckBox item in checkBoxList.Items)
+            {
+                if (item.IsChecked == true)
+                {
+                    sb.Append(
+                        item.Content + " is checked.");
+                    sb.Append("\r\n");
+                }
+            }
+            txtSelection2.Text = sb.ToString();
+        }
+
+
+
+        private void DatePicker_DateValidationError(object sender, DatePickerDateValidationErrorEventArgs e)
+        {
+            lblError.Text = "'" + e.Text +
+                "' is not a valid value because " + e.Exception.Message;
+        }
+
+        private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Check all the newly added items.
+            foreach (DateTime selectedDate in e.AddedItems)
+            {
+                if ((selectedDate.DayOfWeek == DayOfWeek.Saturday) ||
+                    (selectedDate.DayOfWeek == DayOfWeek.Sunday))
+                {
+                    lblError.Text = "Weekends are not allowed";
+
+                    ((Calendar)sender).SelectedDates.Remove(selectedDate);
+                }
+            }
+
+        }
+        private void _calendar_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            _calendar.DisplayMode = CalendarMode.Year;
+        }
+
+        //<Calendar Grid.Row="0" Grid.Column= "3" x:Name= "_calendar" DisplayModeChanged= "_calendar_DisplayModeChanged" Loaded= "_calendar_OnLoaded"
+        //    DisplayDate="{Binding SelectedMonth, UpdateSourceTrigger=PropertyChanged}" DisplayMode="Month" />
+        //private void _calendar_DisplayModeChanged(object sender, CalendarModeChangedEventArgs e)
+        //{
+        //    _calendar.DisplayMode = CalendarMode.Year;
+        //}
+        //private void _calendar_OnLoaded(object sender, RoutedEventArgs e)
+        //{
+        //    _calendar.DisplayMode = CalendarMode.Year;
+        //}
     }
 }

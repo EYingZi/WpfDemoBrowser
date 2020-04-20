@@ -302,11 +302,108 @@
                         <TextBox SpellCheck.IsEnabled="True" TextWrapping="Wrap" 
             Text="Now the spell checker recognizes acantholysis and offers the right correction for acantholysi">
                             <SpellCheck.CustomDictionaries>
-                                <sys:Uri>pack://application:,,,/Controls;component/CustomWords.lex</sys:Uri>
+                                <sys:Uri>pack://application:,,,/WpfDemoBrowser;component/PartialViews/Controls/CustomWords.lex</sys:Uri>
                             </SpellCheck.CustomDictionaries>
                         </TextBox>
                     </Grid>
                 </StackPanel>
+            </Border>
+            <Border Style="{StaticResource MBorder}">
+                <StackPanel>
+                    <ListBox Margin="5" SelectionMode="Multiple" Name="list"  SelectionChanged="list_SelectionChanged">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./Controls/happyface.jpg"  Width="30" Height="30"></Image>
+                            <Label VerticalContentAlignment="Center">A happy face</Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./Controls/redx.jpg" Width="30" Height="30"></Image>
+                            <Label VerticalContentAlignment="Center">A warning sign</Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./Controls/happyface.jpg"  Width="30" Height="30"></Image>
+                            <Label VerticalContentAlignment="Center">A happy face</Label>
+                        </StackPanel>
+                    </ListBox>
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <ListBox Name="checkBoxList" SelectionChanged="checkBoxList_SelectionChanged"
+             CheckBox.Click="checkBoxList_SelectionChanged" >
+                            <CheckBox Margin="3">Option 1</CheckBox>
+                            <CheckBox Margin="3">Option 2</CheckBox>
+                            <CheckBox Margin="3">Option 3</CheckBox>
+                        </ListBox>
+                        <StackPanel Grid.Row="1" Margin="0,10,0,0">
+                            <TextBlock>Current selection:</TextBlock>
+                            <TextBlock  Name="txtSelection2" TextWrapping="Wrap"></TextBlock>
+                            <Button Margin="0,10,0,0" Click="cmd_CheckAllItems">Examine All Items</Button>
+                        </StackPanel>
+                    </Grid>
+                    <ComboBox Margin="5" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./Controls/happyface.jpg"  Width="30" Height="30"></Image>
+                            <Label VerticalContentAlignment="Center">A happy face</Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./Controls/redx.jpg" Width="30" Height="30"></Image>
+                            <Label VerticalContentAlignment="Center">A warning sign</Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./Controls/happyface.jpg"  Width="30" Height="30"></Image>
+                            <Label VerticalContentAlignment="Center">A happy face</Label>
+                        </StackPanel>
+                    </ComboBox>
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource MBorder}">
+
+                <StackPanel>
+                    <TextBlock Margin="10" TextWrapping="Wrap">
+            A Delay of 0 and Interval of 1 make this a fast slider.
+            Try clicking on either side of the thumb and holding down
+            the mouse button.
+                    </TextBlock>
+                    <Slider Margin="10" TickFrequency="1" TickPlacement="TopLeft" Maximum="10" Delay="0" Interval="1" />
+
+                    <TextBlock Margin="0,0,0,5">Normal Slider (Max=100, Val=10)</TextBlock>
+                    <Slider Maximum="100" Value="10"></Slider>
+                    <TextBlock Margin="0,15,0,5">Slider with Tick Marks (TickFrequency=10, TickPlacement=BottomRight)</TextBlock>
+                    <Slider Maximum="100" Value="10" TickFrequency="10" TickPlacement="BottomRight"></Slider>
+                    <TextBlock Margin="0,15,0,5">Slider with Irregular Tick Marks (Ticks=0,5,10,15,25,50,100)</TextBlock>
+                    <Slider Maximum="100" Value="10" Ticks="0,5,10,15,25,50,100"  TickPlacement="BottomRight"></Slider>
+                    <TextBlock Margin="0,15,0,5" TextWrapping="Wrap">Slider with a Selection Range (IsSelectionRangeEnabled=True, SelectionStart=25, SelectionEnd=75)</TextBlock>
+                    <Slider Maximum="100" Value="10" TickFrequency="10" TickPlacement="BottomRight"
+                IsSelectionRangeEnabled="True" SelectionStart="25" SelectionEnd="75"></Slider>
+
+                    <ProgressBar Height="10" IsIndeterminate="True"></ProgressBar>
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource MBorder}">
+                <Grid Background="White" Margin="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel>
+                        <Calendar Margin="3" SelectionMode="MultipleRange" SelectedDatesChanged="Calendar_SelectedDatesChanged" ></Calendar>
+                        <Calendar Margin="3" Name="_calendar" Loaded= "_calendar_OnLoaded" SelectedDatesChanged="Calendar_SelectedDatesChanged" ></Calendar>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1">
+                        <DatePicker Margin="3" DateValidationError="DatePicker_DateValidationError" ></DatePicker>
+                        <DatePicker Margin="3" SelectedDateFormat="Long" DateValidationError="DatePicker_DateValidationError" ></DatePicker>
+                    </StackPanel>
+
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Name="lblError" Foreground="Red" TextWrapping="Wrap"></TextBlock>
+                </Grid>
             </Border>
         </WrapPanel>
     </ScrollViewer>

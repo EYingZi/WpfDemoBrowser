@@ -1,7 +1,6 @@
 ﻿using Animation;
 using BehaviorTest;
 using Commands;
-using Controls;
 using ControlTemplates;
 using CustomControlsClient;
 using DataBinding;
@@ -60,10 +59,6 @@ namespace WpfDemoBrowser
 
             // Controls
             containerRegistry.RegisterForNavigation<ControlsW>();
-
-            containerRegistry.RegisterForNavigation<ListControlTest>();
-            containerRegistry.RegisterForNavigation<RangeBase>();
-            containerRegistry.RegisterForNavigation<DateControls>();
 
             // DataBinding
             containerRegistry.RegisterForNavigation<ElementBinding>();

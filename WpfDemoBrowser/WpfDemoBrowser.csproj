@@ -544,18 +544,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\Controls\DateControls.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\Controls\ListControlTest.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\Controls\RangeBaseTest.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\ControlTemplates\ButtonTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -894,15 +882,6 @@
     </Compile>
     <Compile Include="PartialViews\Commands\TwoDocument.xaml.cs">
       <DependentUpon>TwoDocument.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\Controls\DateControls.xaml.cs">
-      <DependentUpon>DateControls.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\Controls\ListControlTest.xaml.cs">
-      <DependentUpon>ListControlTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\Controls\RangeBaseTest.xaml.cs">
-      <DependentUpon>RangeBaseTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
