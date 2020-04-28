@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PartialViews\RoutedEventsW.xaml.cs">
+      <DependentUpon>RoutedEventsW.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PartialViews\CSharp\CSharp.xaml.cs">
       <DependentUpon>CSharp.xaml</DependentUpon>
     </Compile>
@@ -348,32 +351,14 @@
     <Compile Include="PartialViews\Resources.xaml.cs">
       <DependentUpon>Resources.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PartialViews\RoutedEvents\BubbledLabelClick.xaml.cs">
-      <DependentUpon>BubbledLabelClick.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\RoutedEvents\ButtonMouseUpEvent.xaml.cs">
-      <DependentUpon>ButtonMouseUpEvent.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PartialViews\RoutedEvents\DragAndDrop.xaml.cs">
       <DependentUpon>DragAndDrop.xaml</DependentUpon>
     </Compile>
     <Compile Include="PartialViews\RoutedEvents\Focus.xaml.cs">
       <DependentUpon>Focus.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PartialViews\RoutedEvents\KeyModifiers.xaml.cs">
-      <DependentUpon>KeyModifiers.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\RoutedEvents\KeyPressEvents.xaml.cs">
-      <DependentUpon>KeyPressEvents.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PartialViews\RoutedEvents\MousePosition.xaml.cs">
       <DependentUpon>MousePosition.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\RoutedEvents\OnlyNumbers.xaml.cs">
-      <DependentUpon>OnlyNumbers.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\RoutedEvents\TunneledKeyPress.xaml.cs">
-      <DependentUpon>TunneledKeyPress.xaml</DependentUpon>
     </Compile>
     <Compile Include="PartialViews\SoundAndVideo\AnimatedVideoWindow.xaml.cs">
       <DependentUpon>AnimatedVideoWindow.xaml</DependentUpon>
@@ -541,6 +526,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PartialViews\Commands\TwoDocument.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\RoutedEventsW.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -899,14 +888,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\RoutedEvents\BubbledLabelClick.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\RoutedEvents\ButtonMouseUpEvent.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\RoutedEvents\DragAndDrop.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -915,23 +896,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\RoutedEvents\KeyModifiers.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\RoutedEvents\KeyPressEvents.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\RoutedEvents\MousePosition.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\RoutedEvents\OnlyNumbers.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\RoutedEvents\TunneledKeyPress.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

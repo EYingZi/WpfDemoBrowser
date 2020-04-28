@@ -48,16 +48,16 @@ namespace WpfDemoBrowser.ViewModels
                 new MyTreeViewItem("CSharp", nameof(CSharp)),
                 new MyTreeViewItem("3. 布局 +", nameof(LayoutPanels)),
                 new MyTreeViewItem("4. 依赖项属性 -"),
-                new MyTreeViewItem("5. 路由事件")
+                new MyTreeViewItem("5. 路由事件", nameof(RoutedEventsW))
                 {
                     MenuItems=new ObservableCollection<MyTreeViewItem>()
                     {
-                        new MyTreeViewItem("5.2.2 冒泡路由事件", nameof(BubbledLabelClick)),
-                        new MyTreeViewItem("5.2.5 隧道路由事件", nameof(TunneledKeyPress)),
-                        new MyTreeViewItem("ButtonMouseUpEvent", nameof(ButtonMouseUpEvent)),
-                        new MyTreeViewItem("KeyPressEvents", nameof(KeyPressEvents)),
-                        new MyTreeViewItem("OnlyNumbers", nameof(OnlyNumbers)),
-                        new MyTreeViewItem("KeyModifiers", nameof(KeyModifiers)),
+                        //new MyTreeViewItem("5.2.2 冒泡路由事件", nameof(BubbledLabelClick)),
+                        //new MyTreeViewItem("5.2.5 隧道路由事件", nameof(TunneledKeyPress)),
+                        //new MyTreeViewItem("ButtonMouseUpEvent", nameof(ButtonMouseUpEvent)),
+                        //new MyTreeViewItem("KeyPressEvents", nameof(KeyPressEvents)),
+                        //new MyTreeViewItem("OnlyNumbers", nameof(OnlyNumbers)),
+                        //new MyTreeViewItem("KeyModifiers", nameof(KeyModifiers)),
                         new MyTreeViewItem("5.4.2 焦点", nameof(Focus)),
                         new MyTreeViewItem("5.5 鼠标输入", nameof(MousePosition)),
                         new MyTreeViewItem("5.5.3 鼠标拖放", nameof(DragAndDrop)),

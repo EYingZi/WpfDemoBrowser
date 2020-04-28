@@ -47,12 +47,8 @@ namespace WpfDemoBrowser
             containerRegistry.RegisterForNavigation<LayoutPanels>();
 
             // RoutedEvents
-            containerRegistry.RegisterForNavigation<BubbledLabelClick>();
-            containerRegistry.RegisterForNavigation<TunneledKeyPress>();
-            containerRegistry.RegisterForNavigation<ButtonMouseUpEvent>();
-            containerRegistry.RegisterForNavigation<KeyPressEvents>();
-            containerRegistry.RegisterForNavigation<OnlyNumbers>();
-            containerRegistry.RegisterForNavigation<KeyModifiers>();
+            containerRegistry.RegisterForNavigation<RoutedEventsW>();
+
             containerRegistry.RegisterForNavigation<Focus>();
             containerRegistry.RegisterForNavigation<MousePosition>();
             containerRegistry.RegisterForNavigation<DragAndDrop>();
