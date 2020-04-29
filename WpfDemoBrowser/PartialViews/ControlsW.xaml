@@ -7,7 +7,7 @@
             <Border Style="{StaticResource MBorder}">
                 <StackPanel>
                     <!--5. 字体嵌入-->
-                    <Label Name="tst" FontSize="20" FontFamily="./Controls/#Bayern">
+                    <Label Name="tst" FontSize="20" FontFamily="./Img/#Bayern">
                         <!--!路径-->
                         This is an embedded font 嵌入字体
                     </Label>
@@ -26,12 +26,12 @@
                         <!--ButtonsWithContent-->
                         <Button Margin="3">Text button</Button>
                         <Button Margin="3">
-                            <Image Source="./Controls/happyface.jpg" Stretch="None" />
+                            <Image Source="./Img/happyface.jpg" Stretch="None" />
                         </Button>
                         <Button Margin="3">
                             <StackPanel>
                                 <TextBlock Margin="3">Image and text button</TextBlock>
-                                <Image Source="./Controls/happyface.jpg" Stretch="None" />
+                                <Image Source="./Img/happyface.jpg" Stretch="None" />
                                 <TextBlock Margin="3" >Courtesy of the StackPanel</TextBlock>
                             </StackPanel>
                         </Button>
@@ -88,7 +88,7 @@
                                 <ToolTip Background="#60AA4030" Foreground="White" HasDropShadow="False" >
                                     <StackPanel>
                                         <TextBlock Margin="3">Image and text</TextBlock>
-                                        <Image Source="./Controls/happyface.jpg" Stretch="None" />
+                                        <Image Source="./Img/happyface.jpg" Stretch="None" />
                                         <TextBlock Margin="3" >Image and text</TextBlock>
                                     </StackPanel>
                                 </ToolTip>
@@ -101,13 +101,13 @@
                     </StackPanel>
                     <Grid Margin="10">
                         <TextBlock TextWrapping="Wrap">You can use a Popup to provide a link for
-                a specific <Run TextDecorations="Underline" MouseEnter="run_MouseEnter">term</Run> of interest.
+                            a specific <Run TextDecorations="Underline" MouseEnter="run_MouseEnter">term</Run> of interest.
                         </TextBlock>
                         <Popup Name="popLink" StaysOpen="False" Placement="Mouse" MaxWidth="200" PopupAnimation="Slide" AllowsTransparency="True">
                             <Border BorderBrush="Beige" BorderThickness="2" Background="White">
-                                <TextBlock Margin="10"  TextWrapping="Wrap" >
-                        For more information, see
-                    <Hyperlink NavigateUri="http://en.wikipedia.org/wiki/Term" Click="lnk_Click">Wikipedia</Hyperlink>
+                                <TextBlock Margin="10"  TextWrapping="Wrap">
+                                    For more information, see
+                                    <Hyperlink NavigateUri="http://en.wikipedia.org/wiki/Term" Click="lnk_Click">Wikipedia</Hyperlink>
                                 </TextBlock>
                             </Border>
                         </Popup>
@@ -191,7 +191,7 @@
                                 <TabItem.Header>
                                     <StackPanel>
                                         <TextBlock Margin="3" >Image and Text Tab Title</TextBlock>
-                                        <Image Source="./Controls/happyface.jpg" Stretch="None" />
+                                        <Image Source="./Img/happyface.jpg" Stretch="None" />
                                     </StackPanel>
                                 </TabItem.Header>
                                 <StackPanel Margin="3">
@@ -205,18 +205,15 @@
                     </StackPanel>
                     <StackPanel Width="300">
                         <StackPanel>
-                            <Expander Margin="5" Padding="5" Header="Region One"
-                    BorderThickness="1" BorderBrush="Black">
+                            <Expander Margin="5" Padding="5" Header="Region One" BorderThickness="1" BorderBrush="Black">
                                 <Button Padding="3">Hidden Button One</Button>
                             </Expander>
-                            <Expander Margin="5" Padding="5" Header="Region Two" 
-                    BorderThickness="1" BorderBrush="Black">
+                            <Expander Margin="5" Padding="5" Header="Region Two" BorderThickness="1" BorderBrush="Black">
                                 <TextBlock TextWrapping="Wrap">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien. Proin rutrum arcu vitae tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque libero dui, eleifend faucibus, auctor at, aliquet a, nulla. Nunc eros. Phasellus mauris nisi, eleifend nec, adipiscing nec, luctus nec, lacus. Aliquam justo metus, vestibulum non, accumsan id, hendrerit at, nibh. Praesent accumsan urna quis tortor. Proin erat libero, facilisis nec, rhoncus ut, malesuada ut, ipsum. Donec id nibh.
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien. Proin rutrum arcu vitae tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque libero dui, eleifend faucibus, auctor at, aliquet a, nulla. Nunc eros. Phasellus mauris nisi, eleifend nec, adipiscing nec, luctus nec, lacus. Aliquam justo metus, vestibulum non, accumsan id, hendrerit at, nibh. Praesent accumsan urna quis tortor. Proin erat libero, facilisis nec, rhoncus ut, malesuada ut, ipsum. Donec id nibh.
                                 </TextBlock>
                             </Expander>
-                            <Expander Margin="5" Padding="5" Header="Region Three" IsExpanded="True"
-                    BorderThickness="1" BorderBrush="Black">
+                            <Expander Margin="5" Padding="5" Header="Region Three" IsExpanded="True" BorderThickness="1" BorderBrush="Black">
                                 <Button Padding="3">Hidden Button Two</Button>
                             </Expander>
                         </StackPanel>
@@ -229,35 +226,31 @@
                                 <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Expander Margin="5" Padding="5" Header="Region One"
-              BorderThickness="1" BorderBrush="Black">
+                            <Expander Margin="5" Padding="5" Header="Region One" BorderThickness="1" BorderBrush="Black">
                                 <TextBlock TextWrapping="Wrap">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien.
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien.
                                 </TextBlock>
                             </Expander>
-                            <Expander Grid.Column="1" 
-      Margin="5" Padding="5" Header="Region Two" ExpandDirection="Right"  
-              BorderThickness="1" BorderBrush="Black">
+                            <Expander Grid.Column="1" Margin="5" Padding="5" Header="Region Two" ExpandDirection="Right"  
+                                BorderThickness="1" BorderBrush="Black">
                                 <TextBlock TextWrapping="Wrap">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien.
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien.
                                 </TextBlock>
                             </Expander>
-                            <Expander Grid.Row="1"
-      Margin="5" Padding="5" Header="Region Three" ExpandDirection="Up"
-              BorderThickness="1" BorderBrush="Black">
+                            <Expander Grid.Row="1" Margin="5" Padding="5" Header="Region Three" ExpandDirection="Up"
+                                BorderThickness="1" BorderBrush="Black">
                                 <TextBlock TextWrapping="Wrap">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien.
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien.
                                 </TextBlock>
                             </Expander>
-                            <Expander Grid.Row="1" Grid.Column="1" 
-      Margin="5" Padding="5" Header="Region Three" ExpandDirection="Left" 
-              BorderThickness="1" BorderBrush="Black">
+                            <Expander Grid.Row="1" Grid.Column="1" Margin="5" Padding="5" Header="Region Three" ExpandDirection="Left" 
+                                BorderThickness="1" BorderBrush="Black">
                                 <TextBlock TextWrapping="Wrap">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien.
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien.
                                 </TextBlock>
                             </Expander>
                         </Grid>
@@ -267,7 +260,7 @@
                             <Expander Margin="5" Padding="5" Header="Region Two" >
                                 <ScrollViewer Height="50" >
                                     <TextBlock TextWrapping="Wrap">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien. Proin rutrum arcu vitae tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque libero dui, eleifend faucibus, auctor at, aliquet a, nulla. Nunc eros. Phasellus mauris nisi, eleifend nec, adipiscing nec, luctus nec, lacus. Aliquam justo metus, vestibulum non, accumsan id, hendrerit at, nibh. Praesent accumsan urna quis tortor. Proin erat libero, facilisis nec, rhoncus ut, malesuada ut, ipsum. Donec id nibh.
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam mi sapien, viverra et, lacinia varius, ullamcorper sed, sapien. Proin rutrum arcu vitae tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque libero dui, eleifend faucibus, auctor at, aliquet a, nulla. Nunc eros. Phasellus mauris nisi, eleifend nec, adipiscing nec, luctus nec, lacus. Aliquam justo metus, vestibulum non, accumsan id, hendrerit at, nibh. Praesent accumsan urna quis tortor. Proin erat libero, facilisis nec, rhoncus ut, malesuada ut, ipsum. Donec id nibh.
                                     </TextBlock>
                                 </ScrollViewer>
                             </Expander>
@@ -276,7 +269,6 @@
                             </Expander>
                         </StackPanel>
                     </StackPanel>
-
                 </StackPanel>
             </Border>
 
@@ -288,8 +280,8 @@
                             <RowDefinition Height="*"></RowDefinition>
                         </Grid.RowDefinitions>
                         <TextBox  Name="txt" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True"  
-             SelectionChanged="txt_SelectionChanged"  
-             SpellCheck.IsEnabled="True">The Ministry of Truth contained, it was said, three thousand rooms above ground level, and corresponding ramifications below. Scattered about London there were just three other buildings of similar appearance and size. So completely did they dwarf the surrounding architecture that from the roof of Victory Mansions you could see all four of them simultaneously. They were the homes of the four Ministries between which the entire apparatus of government was divided. The Ministry of Truth, which concerned itself with news, entertainment, education, and the fine arts. The Ministry of Peace, which concerned itself with war. The Ministry of Love, which maintained law and order. And the Ministry of Plenty, which was responsible for economic affairs. Their names, in Newspeak: Minitrue, Minipax, Miniluv, and Miniplenty.</TextBox>
+                            SelectionChanged="txt_SelectionChanged" SpellCheck.IsEnabled="True">
+                            The Ministry of Truth contained, it was said, three thousand rooms above ground level, and corresponding ramifications below. Scattered about London there were just three other buildings of similar appearance and size. So completely did they dwarf the surrounding architecture that from the roof of Victory Mansions you could see all four of them simultaneously. They were the homes of the four Ministries between which the entire apparatus of government was divided. The Ministry of Truth, which concerned itself with news, entertainment, education, and the fine arts. The Ministry of Peace, which concerned itself with war. The Ministry of Love, which maintained law and order. And the Ministry of Plenty, which was responsible for economic affairs. Their names, in Newspeak: Minitrue, Minipax, Miniluv, and Miniplenty.</TextBox>
                         <ScrollViewer Foreground="Blue" Grid.Row="1" Margin="0,10,0,5" VerticalScrollBarVisibility="Auto">
                             <StackPanel>
                                 <TextBlock>Current selection:</TextBlock>
@@ -300,9 +292,9 @@
                     <!--CustomSpellChecker-->
                     <Grid Margin="5">
                         <TextBox SpellCheck.IsEnabled="True" TextWrapping="Wrap" 
-            Text="Now the spell checker recognizes acantholysis and offers the right correction for acantholysi">
+                            Text="Now the spell checker recognizes acantholysis and offers the right correction for acantholysi">
                             <SpellCheck.CustomDictionaries>
-                                <sys:Uri>pack://application:,,,/WpfDemoBrowser;component/PartialViews/Controls/CustomWords.lex</sys:Uri>
+                                <sys:Uri>pack://application:,,,/WpfDemoBrowser;component/PartialViews/Img/CustomWords.lex</sys:Uri>
                             </SpellCheck.CustomDictionaries>
                         </TextBox>
                     </Grid>
@@ -312,15 +304,15 @@
                 <StackPanel>
                     <ListBox Margin="5" SelectionMode="Multiple" Name="list"  SelectionChanged="list_SelectionChanged">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="./Controls/happyface.jpg"  Width="30" Height="30"></Image>
+                            <Image Source="./Img/happyface.jpg"  Width="30" Height="30"></Image>
                             <Label VerticalContentAlignment="Center">A happy face</Label>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="./Controls/redx.jpg" Width="30" Height="30"></Image>
+                            <Image Source="./Img/redx.jpg" Width="30" Height="30"></Image>
                             <Label VerticalContentAlignment="Center">A warning sign</Label>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="./Controls/happyface.jpg"  Width="30" Height="30"></Image>
+                            <Image Source="./Img/happyface.jpg"  Width="30" Height="30"></Image>
                             <Label VerticalContentAlignment="Center">A happy face</Label>
                         </StackPanel>
                     </ListBox>
@@ -331,7 +323,7 @@
                         </Grid.RowDefinitions>
 
                         <ListBox Name="checkBoxList" SelectionChanged="checkBoxList_SelectionChanged"
-             CheckBox.Click="checkBoxList_SelectionChanged" >
+                            CheckBox.Click="checkBoxList_SelectionChanged" >
                             <CheckBox Margin="3">Option 1</CheckBox>
                             <CheckBox Margin="3">Option 2</CheckBox>
                             <CheckBox Margin="3">Option 3</CheckBox>
@@ -344,15 +336,15 @@
                     </Grid>
                     <ComboBox Margin="5" >
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="./Controls/happyface.jpg"  Width="30" Height="30"></Image>
+                            <Image Source="./Img/happyface.jpg"  Width="30" Height="30"></Image>
                             <Label VerticalContentAlignment="Center">A happy face</Label>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="./Controls/redx.jpg" Width="30" Height="30"></Image>
+                            <Image Source="./Img/redx.jpg" Width="30" Height="30"></Image>
                             <Label VerticalContentAlignment="Center">A warning sign</Label>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="./Controls/happyface.jpg"  Width="30" Height="30"></Image>
+                            <Image Source="./Img/happyface.jpg"  Width="30" Height="30"></Image>
                             <Label VerticalContentAlignment="Center">A happy face</Label>
                         </StackPanel>
                     </ComboBox>
@@ -362,9 +354,9 @@
 
                 <StackPanel>
                     <TextBlock Margin="10" TextWrapping="Wrap">
-            A Delay of 0 and Interval of 1 make this a fast slider.
-            Try clicking on either side of the thumb and holding down
-            the mouse button.
+                        A Delay of 0 and Interval of 1 make this a fast slider.
+                        Try clicking on either side of the thumb and holding down
+                        the mouse button.
                     </TextBlock>
                     <Slider Margin="10" TickFrequency="1" TickPlacement="TopLeft" Maximum="10" Delay="0" Interval="1" />
 
@@ -376,7 +368,7 @@
                     <Slider Maximum="100" Value="10" Ticks="0,5,10,15,25,50,100"  TickPlacement="BottomRight"></Slider>
                     <TextBlock Margin="0,15,0,5" TextWrapping="Wrap">Slider with a Selection Range (IsSelectionRangeEnabled=True, SelectionStart=25, SelectionEnd=75)</TextBlock>
                     <Slider Maximum="100" Value="10" TickFrequency="10" TickPlacement="BottomRight"
-                IsSelectionRangeEnabled="True" SelectionStart="25" SelectionEnd="75"></Slider>
+                        IsSelectionRangeEnabled="True" SelectionStart="25" SelectionEnd="75"></Slider>
 
                     <ProgressBar Height="10" IsIndeterminate="True"></ProgressBar>
                 </StackPanel>

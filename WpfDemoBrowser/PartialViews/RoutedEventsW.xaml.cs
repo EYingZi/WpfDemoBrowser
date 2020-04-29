@@ -167,5 +167,63 @@ namespace WpfDemoBrowser.PartialViews.Views
             }
 
         }
+
+        // Focus
+        // System.Windows.Window
+        //protected override void OnActivated(EventArgs e)
+        //{
+        //    base.OnActivated(e);
+        //    cmdFocus.Focus();
+        //}
+
+
+
+        private void cmdCapture_Click(object sender, RoutedEventArgs e)
+        {
+            this.AddHandler(
+                   Mouse.LostMouseCaptureEvent,
+                   new RoutedEventHandler(this.LostCapture));
+            Mouse.Capture(rect);
+
+            cmdCapture.Content = "[ Mouse is now captured ... ]";
+        }
+
+        private void MouseMoved(object sender, MouseEventArgs e)
+        {
+            Point pt = e.GetPosition(this);
+            lblInfo2.Text =
+                String.Format("You are at ({0},{1}) in window coordinates",
+                pt.X, pt.Y);
+        }
+
+        private void LostCapture(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Lost capture");
+            cmdCapture.Content = "Capture the Mouse";
+        }
+
+
+
+
+        private void lblSource_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Label lbl = (Label)sender;
+            DragDrop.DoDragDrop(lbl, lbl.Content, DragDropEffects.Copy);
+        }
+
+        private void lblTarget_Drop(object sender, DragEventArgs e)
+        {
+            ((Label)sender).Content = e.Data.GetData(DataFormats.Text);
+        }
+
+        private void lblTarget_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Text))
+                e.Effects = DragDropEffects.Copy;
+            else
+                e.Effects = DragDropEffects.None;
+        }
+
+
     }
 }

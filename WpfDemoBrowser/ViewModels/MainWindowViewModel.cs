@@ -11,7 +11,6 @@ using WpfDemoBrowser.PartialViews.Views;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
-using RoutedEvents;
 using SoundAndVideo;
 using Styles;
 using System.Collections.ObjectModel;
@@ -48,21 +47,21 @@ namespace WpfDemoBrowser.ViewModels
                 new MyTreeViewItem("CSharp", nameof(CSharp)),
                 new MyTreeViewItem("3. 布局 +", nameof(LayoutPanels)),
                 new MyTreeViewItem("4. 依赖项属性 -"),
-                new MyTreeViewItem("5. 路由事件", nameof(RoutedEventsW))
-                {
-                    MenuItems=new ObservableCollection<MyTreeViewItem>()
-                    {
-                        //new MyTreeViewItem("5.2.2 冒泡路由事件", nameof(BubbledLabelClick)),
-                        //new MyTreeViewItem("5.2.5 隧道路由事件", nameof(TunneledKeyPress)),
-                        //new MyTreeViewItem("ButtonMouseUpEvent", nameof(ButtonMouseUpEvent)),
-                        //new MyTreeViewItem("KeyPressEvents", nameof(KeyPressEvents)),
-                        //new MyTreeViewItem("OnlyNumbers", nameof(OnlyNumbers)),
-                        //new MyTreeViewItem("KeyModifiers", nameof(KeyModifiers)),
-                        new MyTreeViewItem("5.4.2 焦点", nameof(Focus)),
-                        new MyTreeViewItem("5.5 鼠标输入", nameof(MousePosition)),
-                        new MyTreeViewItem("5.5.3 鼠标拖放", nameof(DragAndDrop)),
-                    }
-                },
+                new MyTreeViewItem("5. 路由事件", nameof(RoutedEventsW)),
+                //{
+                //    MenuItems=new ObservableCollection<MyTreeViewItem>()
+                //    {
+                //        new MyTreeViewItem("5.2.2 冒泡路由事件", nameof(BubbledLabelClick)),
+                //        new MyTreeViewItem("5.2.5 隧道路由事件", nameof(TunneledKeyPress)),
+                //        new MyTreeViewItem("ButtonMouseUpEvent", nameof(ButtonMouseUpEvent)),
+                //        new MyTreeViewItem("KeyPressEvents", nameof(KeyPressEvents)),
+                //        new MyTreeViewItem("OnlyNumbers", nameof(OnlyNumbers)),
+                //        new MyTreeViewItem("KeyModifiers", nameof(KeyModifiers)),
+                //        new MyTreeViewItem("5.4.2 焦点", nameof(Focus)),
+                //        new MyTreeViewItem("5.5 鼠标输入", nameof(MousePosition)),
+                //        new MyTreeViewItem("5.5.3 鼠标拖放", nameof(DragAndDrop)),
+                //    }
+                //},
                 new MyTreeViewItem("6. 控件", nameof(ControlsW)),
                 //{
                 //    MenuItems = new ObservableCollection<MyTreeViewItem>()
@@ -79,12 +78,12 @@ namespace WpfDemoBrowser.ViewModels
                 //},
                 new MyTreeViewItem("7. Application类 -"),
                 new MyTreeViewItem("8. 元素绑定 +", nameof(ElementBinding)),
-                new MyTreeViewItem("9. 命令")
+                new MyTreeViewItem("9. 命令", nameof(CommandsW))
                 {
                     MenuItems = new ObservableCollection<MyTreeViewItem>()
                     {
-                        new MyTreeViewItem("TestNewCommand", nameof(TestNewCommand)),
-                        new MyTreeViewItem("SimpleDocument", nameof(SimpleDocument)),
+                        //new MyTreeViewItem("TestNewCommand", nameof(TestNewCommand)),
+                        //new MyTreeViewItem("SimpleDocument", nameof(SimpleDocument)),
                         new MyTreeViewItem("CustomCommand", nameof(CustomCommand)),
                         new MyTreeViewItem("NoCommandTextBox", nameof(NoCommandTextBox)),
                         new MyTreeViewItem("CustomControlWithCommand", nameof(CustomControlWithCommand)),

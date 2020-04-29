@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PartialViews\CommandsW.xaml.cs">
+      <DependentUpon>CommandsW.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PartialViews\RoutedEventsW.xaml.cs">
       <DependentUpon>RoutedEventsW.xaml</DependentUpon>
     </Compile>
@@ -351,15 +354,6 @@
     <Compile Include="PartialViews\Resources.xaml.cs">
       <DependentUpon>Resources.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PartialViews\RoutedEvents\DragAndDrop.xaml.cs">
-      <DependentUpon>DragAndDrop.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\RoutedEvents\Focus.xaml.cs">
-      <DependentUpon>Focus.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\RoutedEvents\MousePosition.xaml.cs">
-      <DependentUpon>MousePosition.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PartialViews\SoundAndVideo\AnimatedVideoWindow.xaml.cs">
       <DependentUpon>AnimatedVideoWindow.xaml</DependentUpon>
     </Compile>
@@ -517,15 +511,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\Commands\SimpleDocument.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\Commands\TestNewCommand.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\Commands\TwoDocument.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\CommandsW.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -863,12 +853,6 @@
     <Compile Include="PartialViews\Commands\NoCommandTextBox.xaml.cs">
       <DependentUpon>NoCommandTextBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PartialViews\Commands\SimpleDocument.xaml.cs">
-      <DependentUpon>SimpleDocument.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\Commands\TestNewCommand.xaml.cs">
-      <DependentUpon>TestNewCommand.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PartialViews\Commands\TwoDocument.xaml.cs">
       <DependentUpon>TwoDocument.xaml</DependentUpon>
     </Compile>
@@ -885,18 +869,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PartialViews\Resources.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\RoutedEvents\DragAndDrop.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\RoutedEvents\Focus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\RoutedEvents\MousePosition.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -992,9 +964,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="PartialViews\Controls\CustomWords.lex" />
+    <None Include="PartialViews\Img\CustomWords.lex" />
     <Resource Include="PartialViews\Drawing\C14\Grayscale_Compiled.ps" />
-    <Resource Include="PartialViews\Controls\bayern.ttf" />
+    <Resource Include="PartialViews\Img\bayern.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -1030,7 +1002,7 @@
     </Content>
     <Resource Include="PartialViews\Drawing\C12\tile.jpg" />
     <Resource Include="PartialViews\Drawing\C12\logo.gif" />
-    <Resource Include="PartialViews\RoutedEvents\happyface.jpg" />
+    <Resource Include="PartialViews\Img\happyface.jpg" />
     <Resource Include="PartialViews\DrawingIn3D\Tree.jpg" />
     <Resource Include="PartialViews\SoundAndVideo\Resources\chimes.wav" />
     <None Include="PartialViews\SoundAndVideo\SQ3GM1.MID">
@@ -1078,8 +1050,7 @@
     <Resource Include="PartialViews\Drawing\C12\happyface.jpg" />
     <Resource Include="PartialViews\Styles\happyface.jpg" />
     <Resource Include="Images\office.jpg" />
-    <Resource Include="PartialViews\Controls\redx.jpg" />
-    <Resource Include="PartialViews\Controls\happyface.jpg" />
+    <Resource Include="PartialViews\Img\redx.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PartialViews\Windows\" />

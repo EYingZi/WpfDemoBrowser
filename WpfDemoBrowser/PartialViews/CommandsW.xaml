@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="WpfDemoBrowser.PartialViews.Views.CommandsW"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=system">
+    <UserControl.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" Executed="NewCommand" />
+    </UserControl.CommandBindings>
+    <ScrollViewer>
+        <WrapPanel HorizontalAlignment="Center">
+            <Border Style="{StaticResource MBorder}">
+                <StackPanel >
+                    <Menu>
+                        <MenuItem Header="File">
+                            <MenuItem Command="New"></MenuItem>
+                        </MenuItem>
+                    </Menu>
+                    <Button Margin="5" Padding="5" Command="ApplicationCommands.New" ToolTip="{x:Static ApplicationCommands.New}">New</Button>
+                    <Button Margin="5" Padding="5" Visibility="Hidden" Command="ApplicationCommands.Open">Open (unwired)</Button>
+                    <Button Margin="5" Padding="5" Visibility="Hidden" Click="cmdDoCommand_Click" >DoCommand</Button>
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource MBorder}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Menu Grid.Row="0">
+                        <MenuItem Header="File">
+                            <MenuItem Command="New"></MenuItem>
+                            <MenuItem Command="Open"></MenuItem>
+                            <MenuItem Command="Save"></MenuItem>
+                            <MenuItem Command="SaveAs"></MenuItem>
+                            <Separator></Separator>
+                            <MenuItem Command="Close"></MenuItem>
+                        </MenuItem>
+                    </Menu>
+                    <ToolBarTray Grid.Row="1">
+                        <ToolBar>
+                            <Button Command="New">New</Button>
+                            <Button Command="Open">Open</Button>
+                            <Button Command="Save">Save</Button>
+                        </ToolBar>
+                        <ToolBar>
+                            <Button Command="Cut">Cut</Button>
+                            <Button Command="Copy">Copy</Button>
+                            <Button Command="Paste">Paste</Button>
+                        </ToolBar>
+                    </ToolBarTray>
+                    <TextBox Name="txt" Margin="5" Grid.Row="2" 
+               TextWrapping="Wrap" AcceptsReturn="True"
+               TextChanged="txt_TextChanged"></TextBox>
+                </Grid>
+            </Border>
+        </WrapPanel>
+    </ScrollViewer>
+</UserControl>

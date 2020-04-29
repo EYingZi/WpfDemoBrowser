@@ -11,7 +11,6 @@ using WpfDemoBrowser.PartialViews.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Unity;
-using RoutedEvents;
 using SoundAndVideo;
 using StoreDatabase;
 using Styles;
@@ -49,19 +48,15 @@ namespace WpfDemoBrowser
             // RoutedEvents
             containerRegistry.RegisterForNavigation<RoutedEventsW>();
 
-            containerRegistry.RegisterForNavigation<Focus>();
-            containerRegistry.RegisterForNavigation<MousePosition>();
-            containerRegistry.RegisterForNavigation<DragAndDrop>();
-
             // Controls
             containerRegistry.RegisterForNavigation<ControlsW>();
 
             // DataBinding
             containerRegistry.RegisterForNavigation<ElementBinding>();
-            
+
             // Commands
-            containerRegistry.RegisterForNavigation<TestNewCommand>();
-            containerRegistry.RegisterForNavigation<SimpleDocument>();
+            containerRegistry.RegisterForNavigation<CommandsW>();
+
             containerRegistry.RegisterForNavigation<CustomCommand>();
             containerRegistry.RegisterForNavigation<NoCommandTextBox>();
             containerRegistry.RegisterForNavigation<CustomControlWithCommand>();

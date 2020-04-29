@@ -16,7 +16,7 @@
                     <Label Margin="5" Background="AliceBlue" BorderBrush="Black" BorderThickness="1" MouseUp="SomethingClicked" HorizontalAlignment="Left" >
                         <StackPanel MouseUp="SomethingClicked" >
                             <TextBlock Margin="3" MouseUp="SomethingClicked">Image and picture label</TextBlock>
-                            <Image Source="./RoutedEvents/happyface.jpg" Stretch="None" MouseUp="SomethingClicked" />
+                            <Image Source="./Img/happyface.jpg" Stretch="None" MouseUp="SomethingClicked" />
                             <TextBlock Margin="3" MouseUp="SomethingClicked">Courtesy of the StackPanel</TextBlock>
                         </StackPanel>
                     </Label>
@@ -38,7 +38,7 @@
                     <Label Margin="5" Background="AliceBlue" BorderBrush="Black" BorderThickness="1" HorizontalContentAlignment="Stretch" PreviewKeyDown="SomeKeyPressed">
                         <StackPanel PreviewKeyDown="SomeKeyPressed">
                             <TextBlock Margin="3" HorizontalAlignment="Center" PreviewKeyDown="SomeKeyPressed">Image and text label</TextBlock>
-                            <Image Source="./RoutedEvents/happyface.jpg" Stretch="None" PreviewKeyDown="SomeKeyPressed"/>
+                            <Image Source="./Img/happyface.jpg" Stretch="None" PreviewKeyDown="SomeKeyPressed"/>
                             <DockPanel Margin="0,5,0,0" PreviewKeyDown="SomeKeyPressed">
                                 <TextBlock Margin="3" PreviewKeyDown="SomeKeyPressed">Type here:</TextBlock>
                                 <TextBox PreviewKeyDown="SomeKeyPressed" KeyDown="SomeKeyPressed"></TextBox>
@@ -92,6 +92,43 @@
                     <TextBlock Name="lblInfo"></TextBlock>
                     <Button Click="CheckShift">Check Current Shift State</Button>
                 </StackPanel>
+            </Border>
+            <Border Style="{StaticResource MBorder}">
+                <StackPanel Margin="5">
+                    <Button Margin="5" Padding="30" Name="cmdFocus">Focused</Button>
+                    <Button Margin="5" Padding="30">Not Focused</Button>
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource MBorder}">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Rectangle Name="rect" MouseMove="MouseMoved" Fill="LightBlue" ></Rectangle>
+                    <Button Grid.Row="1" Name="cmdCapture" Click="cmdCapture_Click">Capture the Mouse</Button>
+                    <TextBlock Name="lblInfo2" Grid.Row="2"></TextBlock>
+                </Grid>
+            </Border>
+            <Border Style="{StaticResource MBorder}">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center">Drag from this TextBox</TextBox>
+                    <Label Grid.Column="1" Padding="20" Background="LightGoldenrodYellow" 
+                        VerticalAlignment="Center"  HorizontalAlignment="Center"
+                        MouseDown="lblSource_MouseDown">Or this Label</Label>
+                    <Label Grid.Row="1" Grid.ColumnSpan="2" Background="LightGoldenrodYellow"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20"
+                        AllowDrop="True" Drop="lblTarget_Drop">To this Label</Label>
+                </Grid>
             </Border>
         </WrapPanel>
     </ScrollViewer>

@@ -1,6 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,25 +11,34 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Commands
+namespace WpfDemoBrowser.PartialViews.Views
 {
     /// <summary>
-    /// Interaction logic for SimpleDocument.xaml
+    /// LayoutPanels.xaml 的交互逻辑
     /// </summary>
-
-    public partial class SimpleDocument : UserControl
+    public partial class CommandsW : UserControl
     {
-
-        public SimpleDocument()
+        public CommandsW()
         {
+            //ApplicationCommands.New.Text = "Completely New";
+
             InitializeComponent();
+
+            //CommandBinding bindingNew = new CommandBinding(ApplicationCommands.New);
+            //bindingNew.Executed += NewCommand;
+
+            //this.CommandBindings.Add(bindingNew);
+
+
+            //---
 
             // Create bindings.
             CommandBinding binding;
             binding = new CommandBinding(ApplicationCommands.New);
-            binding.Executed += NewCommand;
+            binding.Executed += NewCommand2;
             this.CommandBindings.Add(binding);
 
             binding = new CommandBinding(ApplicationCommands.Open);
@@ -41,8 +53,22 @@ namespace Commands
 
         private void NewCommand(object sender, ExecutedRoutedEventArgs e)
         {
+            MessageBox.Show("New command triggered by " + e.Source.ToString());
+        }
+
+        private void cmdDoCommand_Click(object sender, RoutedEventArgs e)
+        {
+            this.CommandBindings[0].Command.Execute(null);
+            // ApplicationCommands.New.Execute(null, (Button)sender);
+        }
+
+
+
+
+        private void NewCommand2(object sender, ExecutedRoutedEventArgs e)
+        {
             MessageBox.Show("New command triggered with " + e.Source.ToString());
-            isDirty = false;          
+            isDirty = false;
         }
 
         private void OpenCommand(object sender, ExecutedRoutedEventArgs e)
@@ -63,9 +89,8 @@ namespace Commands
         }
 
         private void SaveCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {            
+        {
             e.CanExecute = isDirty;
         }
-
     }
 }
