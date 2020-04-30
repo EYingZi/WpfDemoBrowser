@@ -503,10 +503,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\Commands\NoCommandTextBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\Commands\TwoDocument.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -842,9 +838,6 @@
     </Compile>
     <Compile Include="PartialViews\Commands\MonitorCommands.xaml.cs">
       <DependentUpon>MonitorCommands.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\Commands\NoCommandTextBox.xaml.cs">
-      <DependentUpon>NoCommandTextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="PartialViews\Commands\TwoDocument.xaml.cs">
       <DependentUpon>TwoDocument.xaml</DependentUpon>

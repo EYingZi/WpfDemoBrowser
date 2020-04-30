@@ -49,6 +49,14 @@ namespace WpfDemoBrowser.PartialViews.Views
             binding.Executed += SaveCommand_Executed;
             binding.CanExecute += SaveCommand_CanExecute;
             this.CommandBindings.Add(binding);
+
+
+            // NoCommandTextBox
+
+            ntxt.CommandBindings.Add(new CommandBinding(ApplicationCommands.Cut, null, SuppressCommand));
+
+            ntxt.InputBindings.Add(new KeyBinding(ApplicationCommands.NotACommand, Key.C, ModifierKeys.Control));
+            //txt.ContextMenu = null;
         }
 
         private void NewCommand(object sender, ExecutedRoutedEventArgs e)
@@ -101,6 +109,13 @@ namespace WpfDemoBrowser.PartialViews.Views
             MessageBox.Show("Requery");
         }
 
+
+
+        private void SuppressCommand(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = false;
+            e.Handled = true;
+        }
     }
 
 

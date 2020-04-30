@@ -62,6 +62,11 @@
                     <Button Margin="5" Command="local:DataCommands.Requery">Requery</Button>
                 </Grid>
             </Border>
+            <Border Style="{StaticResource MBorder}">
+                <Grid>
+                    <TextBox Name="ntxt" />
+                </Grid>
+            </Border>
         </WrapPanel>
     </ScrollViewer>
 </UserControl>

@@ -85,7 +85,7 @@ namespace WpfDemoBrowser.ViewModels
                         //new MyTreeViewItem("TestNewCommand", nameof(TestNewCommand)),
                         //new MyTreeViewItem("SimpleDocument", nameof(SimpleDocument)),
                         //new MyTreeViewItem("CustomCommand", nameof(CustomCommand)),
-                        new MyTreeViewItem("NoCommandTextBox", nameof(NoCommandTextBox)),
+                        //new MyTreeViewItem("NoCommandTextBox", nameof(NoCommandTextBox)),
                         new MyTreeViewItem("CustomControlWithCommand", nameof(CustomControlWithCommand)),
                         new MyTreeViewItem("TwoDocument", nameof(TwoDocument)),
                         new MyTreeViewItem("MonitorCommands", nameof(MonitorCommands))
