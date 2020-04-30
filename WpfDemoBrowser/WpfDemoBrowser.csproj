@@ -495,10 +495,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\Commands\CustomCommand.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\Commands\CustomControlWithCommand.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -841,9 +837,6 @@
       <DependentUpon>PlayMediaTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="PartialViews\Commands\CommandSlider.cs" />
-    <Compile Include="PartialViews\Commands\CustomCommand.xaml.cs">
-      <DependentUpon>CustomCommand.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PartialViews\Commands\CustomControlWithCommand.xaml.cs">
       <DependentUpon>CustomControlWithCommand.xaml</DependentUpon>
     </Compile>

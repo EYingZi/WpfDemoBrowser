@@ -1,9 +1,13 @@
 ﻿<UserControl x:Class="WpfDemoBrowser.PartialViews.Views.CommandsW"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:sys="clr-namespace:System;assembly=system">
+    xmlns:sys="clr-namespace:System;assembly=system"
+    xmlns:local="clr-namespace:WpfDemoBrowser.PartialViews.Views">
     <UserControl.CommandBindings>
         <CommandBinding Command="ApplicationCommands.New" Executed="NewCommand" />
+
+        <!--CustomCommand-->
+        <CommandBinding Command="local:DataCommands.Requery" Executed="RequeryCommand"/>
     </UserControl.CommandBindings>
     <ScrollViewer>
         <WrapPanel HorizontalAlignment="Center">
@@ -49,8 +53,13 @@
                         </ToolBar>
                     </ToolBarTray>
                     <TextBox Name="txt" Margin="5" Grid.Row="2" 
-               TextWrapping="Wrap" AcceptsReturn="True"
-               TextChanged="txt_TextChanged"></TextBox>
+                       TextWrapping="Wrap" AcceptsReturn="True"
+                       TextChanged="txt_TextChanged"></TextBox>
+                </Grid>
+            </Border>
+            <Border Style="{StaticResource MBorder}">
+                <Grid>
+                    <Button Margin="5" Command="local:DataCommands.Requery">Requery</Button>
                 </Grid>
             </Border>
         </WrapPanel>
