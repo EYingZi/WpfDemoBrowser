@@ -57,8 +57,6 @@ namespace WpfDemoBrowser
             // Commands
             containerRegistry.RegisterForNavigation<CommandsW>();
 
-            containerRegistry.RegisterForNavigation<CustomControlWithCommand>();
-            containerRegistry.RegisterForNavigation<TwoDocument>();
             containerRegistry.RegisterForNavigation<MonitorCommands>();
 
             // Resources

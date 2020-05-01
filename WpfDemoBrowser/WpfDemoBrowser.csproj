@@ -495,15 +495,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\Commands\CustomControlWithCommand.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\Commands\MonitorCommands.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PartialViews\Commands\TwoDocument.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -832,15 +824,9 @@
     <Compile Include="PartialViews\Behaviors\PlayMediaTest.xaml.cs">
       <DependentUpon>PlayMediaTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PartialViews\Commands\CommandSlider.cs" />
-    <Compile Include="PartialViews\Commands\CustomControlWithCommand.xaml.cs">
-      <DependentUpon>CustomControlWithCommand.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="PartialViews\CommandSlider.cs" />
     <Compile Include="PartialViews\Commands\MonitorCommands.xaml.cs">
       <DependentUpon>MonitorCommands.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PartialViews\Commands\TwoDocument.xaml.cs">
-      <DependentUpon>TwoDocument.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

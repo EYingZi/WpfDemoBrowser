@@ -5,7 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows;
 
-namespace Commands
+namespace WpfDemoBrowser.PartialViews.Views
 {
     public class CommandSlider : Slider, ICommandSource
     {

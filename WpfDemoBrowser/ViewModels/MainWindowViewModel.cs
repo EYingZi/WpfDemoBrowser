@@ -47,7 +47,7 @@ namespace WpfDemoBrowser.ViewModels
                 new MyTreeViewItem("CSharp", nameof(CSharp)),
                 new MyTreeViewItem("3. 布局 +", nameof(LayoutPanels)),
                 new MyTreeViewItem("4. 依赖项属性 -"),
-                new MyTreeViewItem("5. 路由事件", nameof(RoutedEventsW)),
+                new MyTreeViewItem("5. 路由事件 +", nameof(RoutedEventsW)),
                 //{
                 //    MenuItems=new ObservableCollection<MyTreeViewItem>()
                 //    {
@@ -62,7 +62,7 @@ namespace WpfDemoBrowser.ViewModels
                 //        new MyTreeViewItem("5.5.3 鼠标拖放", nameof(DragAndDrop)),
                 //    }
                 //},
-                new MyTreeViewItem("6. 控件", nameof(ControlsW)),
+                new MyTreeViewItem("6. 控件 +", nameof(ControlsW)),
                 //{
                 //    MenuItems = new ObservableCollection<MyTreeViewItem>()
                 //    {
@@ -86,8 +86,8 @@ namespace WpfDemoBrowser.ViewModels
                         //new MyTreeViewItem("SimpleDocument", nameof(SimpleDocument)),
                         //new MyTreeViewItem("CustomCommand", nameof(CustomCommand)),
                         //new MyTreeViewItem("NoCommandTextBox", nameof(NoCommandTextBox)),
-                        new MyTreeViewItem("CustomControlWithCommand", nameof(CustomControlWithCommand)),
-                        new MyTreeViewItem("TwoDocument", nameof(TwoDocument)),
+                        //new MyTreeViewItem("CustomControlWithCommand", nameof(CustomControlWithCommand)),
+                        //new MyTreeViewItem("TwoDocument", nameof(TwoDocument)),
                         new MyTreeViewItem("MonitorCommands", nameof(MonitorCommands))
                     }
                 },
