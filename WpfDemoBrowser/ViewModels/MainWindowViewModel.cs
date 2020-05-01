@@ -1,6 +1,5 @@
 ﻿using Animation;
 using BehaviorTest;
-using Commands;
 using ControlTemplates;
 using CustomControlsClient;
 using DataBinding;
@@ -78,19 +77,19 @@ namespace WpfDemoBrowser.ViewModels
                 //},
                 new MyTreeViewItem("7. Application类 -"),
                 new MyTreeViewItem("8. 元素绑定 +", nameof(ElementBinding)),
-                new MyTreeViewItem("9. 命令", nameof(CommandsW))
-                {
-                    MenuItems = new ObservableCollection<MyTreeViewItem>()
-                    {
-                        //new MyTreeViewItem("TestNewCommand", nameof(TestNewCommand)),
-                        //new MyTreeViewItem("SimpleDocument", nameof(SimpleDocument)),
-                        //new MyTreeViewItem("CustomCommand", nameof(CustomCommand)),
-                        //new MyTreeViewItem("NoCommandTextBox", nameof(NoCommandTextBox)),
-                        //new MyTreeViewItem("CustomControlWithCommand", nameof(CustomControlWithCommand)),
-                        //new MyTreeViewItem("TwoDocument", nameof(TwoDocument)),
-                        new MyTreeViewItem("MonitorCommands", nameof(MonitorCommands))
-                    }
-                },
+                new MyTreeViewItem("9. 命令 +", nameof(CommandsW)),
+                //{
+                //    MenuItems = new ObservableCollection<MyTreeViewItem>()
+                //    {
+                //        new MyTreeViewItem("TestNewCommand", nameof(TestNewCommand)),
+                //        new MyTreeViewItem("SimpleDocument", nameof(SimpleDocument)),
+                //        new MyTreeViewItem("CustomCommand", nameof(CustomCommand)),
+                //        new MyTreeViewItem("NoCommandTextBox", nameof(NoCommandTextBox)),
+                //        new MyTreeViewItem("CustomControlWithCommand", nameof(CustomControlWithCommand)),
+                //        new MyTreeViewItem("TwoDocument", nameof(TwoDocument)),
+                //        new MyTreeViewItem("MonitorCommands", nameof(MonitorCommands))
+                //    }
+                //},
                 new MyTreeViewItem("10. 资源 +", nameof(Resources)),
                 new MyTreeViewItem("11. 样式和行为")
                 {

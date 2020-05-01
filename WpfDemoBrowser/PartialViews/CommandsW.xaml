@@ -2,7 +2,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=system"
-    xmlns:local="clr-namespace:WpfDemoBrowser.PartialViews.Views">
+    xmlns:local="clr-namespace:WpfDemoBrowser.PartialViews.Views"
+    Unloaded="window_Unloaded">
     <UserControl.Resources>
         <local:FontStringValueConverter x:Key="StringConverterResource"/>
         <local:FontDoubleValueConverter x:Key="DoubleConverterResource"/>
@@ -14,6 +15,11 @@
 
         <!--CustomCommand-->
         <CommandBinding Command="local:DataCommands.Requery" Executed="RequeryCommand"/>
+
+
+        <CommandBinding Command="local:CommandsW.ApplicationUndo"
+            Executed="ApplicationUndoCommand_Executed"
+            CanExecute="ApplicationUndoCommand_CanExecute" />
     </UserControl.CommandBindings>
     <ScrollViewer>
         <WrapPanel HorizontalAlignment="Center">
@@ -123,7 +129,7 @@
                     </Border>
                 </StackPanel>
             </Border>
-            <Border  Style="{StaticResource MBorder}">
+            <Border Style="{StaticResource MBorder}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
@@ -178,6 +184,30 @@
                         -->
 
                     </TextBox>
+                </Grid>
+            </Border>
+            <Border Style="{StaticResource MBorder}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ToolBarTray Grid.Row="0">
+                        <ToolBar>
+                            <Button Command="ApplicationCommands.Cut">Cut</Button>
+                            <Button Command="ApplicationCommands.Copy">Copy</Button>
+                            <Button Command="ApplicationCommands.Paste">Paste</Button>
+                            <Button Command="ApplicationCommands.Undo">Undo</Button>
+                        </ToolBar>
+                        <ToolBar>
+                            <Button Command="local:CommandsW.ApplicationUndo">Reverse Last Command</Button>
+                        </ToolBar>
+                    </ToolBarTray>
+                    <TextBox Margin="5" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" />
+                    <TextBox Margin="5" Grid.Row="2" TextWrapping="Wrap" AcceptsReturn="True" />
+                    <ListBox Grid.Row="3" Name="lstHistory" Margin="5" DisplayMemberPath="CommandName" />
                 </Grid>
             </Border>
         </WrapPanel>

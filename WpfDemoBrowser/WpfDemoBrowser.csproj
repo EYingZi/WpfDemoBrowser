@@ -495,10 +495,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PartialViews\Commands\MonitorCommands.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="PartialViews\CommandsW.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -825,9 +821,6 @@
       <DependentUpon>PlayMediaTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="PartialViews\CommandSlider.cs" />
-    <Compile Include="PartialViews\Commands\MonitorCommands.xaml.cs">
-      <DependentUpon>MonitorCommands.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

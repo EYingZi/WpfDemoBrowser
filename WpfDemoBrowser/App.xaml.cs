@@ -1,6 +1,5 @@
 ﻿using Animation;
 using BehaviorTest;
-using Commands;
 using ControlTemplates;
 using CustomControlsClient;
 using DataBinding;
@@ -56,8 +55,6 @@ namespace WpfDemoBrowser
 
             // Commands
             containerRegistry.RegisterForNavigation<CommandsW>();
-
-            containerRegistry.RegisterForNavigation<MonitorCommands>();
 
             // Resources
             containerRegistry.RegisterForNavigation<Resources>();
