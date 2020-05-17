@@ -61,6 +61,9 @@
     <Compile Include="PartialViews\CommandsW.xaml.cs">
       <DependentUpon>CommandsW.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PartialViews\C15W.xaml.cs">
+      <DependentUpon>C15W.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PartialViews\RoutedEventsW.xaml.cs">
       <DependentUpon>RoutedEventsW.xaml</DependentUpon>
     </Compile>
@@ -496,6 +499,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PartialViews\CommandsW.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PartialViews\C15W.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

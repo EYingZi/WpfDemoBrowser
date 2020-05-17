@@ -132,7 +132,7 @@ namespace WpfDemoBrowser.ViewModels
                 {
                     MenuItems = new ObservableCollection<MyTreeViewItem>()
                     {
-                        new MyTreeViewItem("15. 动画基础")
+                        new MyTreeViewItem("15. 动画基础", nameof(C15W))
                         {
                             MenuItems=new ObservableCollection<MyTreeViewItem>()
                             {

@@ -81,8 +81,10 @@ namespace WpfDemoBrowser
 
             // Drawing.C14
             containerRegistry.RegisterForNavigation<C14>();
-            
+
             // Animation.C15
+            containerRegistry.RegisterForNavigation<C15W>();
+
             containerRegistry.RegisterForNavigation<CodeAnimation>();
             containerRegistry.RegisterForNavigation<XamlAnimation>();
             containerRegistry.RegisterForNavigation<AnimationInStyle>();
