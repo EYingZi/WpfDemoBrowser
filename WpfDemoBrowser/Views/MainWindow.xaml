@@ -16,6 +16,11 @@
         </Grid.ColumnDefinitions>
         <!-- SelectedValuePath="Value"-->
         <TreeView Name="TvMenu" Grid.Row="1" ItemsSource="{Binding MenuItems}">
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="TreeViewItem">
+                    <Setter Property="IsExpanded" Value="{Binding Path=IsExpanded, Mode=OneWay}" />
+                </Style>
+            </TreeView.ItemContainerStyle>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectedItemChanged">
                     <i:InvokeCommandAction Command="{Binding SelectedChangedCommand}" CommandParameter="{Binding ElementName=TvMenu}" />

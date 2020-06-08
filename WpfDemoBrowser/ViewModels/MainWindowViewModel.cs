@@ -91,7 +91,7 @@ namespace WpfDemoBrowser.ViewModels
                 //    }
                 //},
                 new MyTreeViewItem("10. 资源 +", nameof(Resources)),
-                new MyTreeViewItem("11. 样式和行为")
+                new MyTreeViewItem("11. 样式和行为", isExpanded:true)
                 {
                     MenuItems=new ObservableCollection<MyTreeViewItem>()
                     {
@@ -108,7 +108,7 @@ namespace WpfDemoBrowser.ViewModels
                                 new MyTreeViewItem("11.2.2 事件触发器", nameof(EventTriggers))
                             }
                         },
-                        new MyTreeViewItem("11.3 行为")
+                        new MyTreeViewItem("11.3 行为", isExpanded:true)
                         {
                             MenuItems = new ObservableCollection<MyTreeViewItem>()
                             {
@@ -117,7 +117,8 @@ namespace WpfDemoBrowser.ViewModels
                                 new MyTreeViewItem("DragInCanvasTest", nameof(DragInCanvasTest))
                             }
                         },
-                    }
+                    },
+                    IsExpanded=true
                 },
                 new MyTreeViewItem("12-14. 图画")
                 {
